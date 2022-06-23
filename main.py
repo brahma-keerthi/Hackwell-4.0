@@ -18,7 +18,7 @@ def sortTime(sub_li):
     return sub_li 
 
 # Reading column wise
-df = pd.read_csv("data.csv", usecols = ['AreaCode','AreaName','Category', 'Priority','localtime', 'Source', 'Link1'])
+df = pd.read_csv("data.csv", usecols = ['AreaCode','AreaName','ConditionName', 'Priority','localtime', 'Source', 'Link1'])
 
 # Converting column read file to csv
 df.to_csv("Extra.csv", index=False)
@@ -36,7 +36,7 @@ with open('Extra.csv') as file_obj:
     del arr[0]
 
 # Removes the intermediate file Extra.csv
-os.remove("Extra.csv")
+# os.remove("Extra.csv")
 
 # Sorts the data based on the data
 arr = sortArea(arr)
@@ -67,7 +67,13 @@ for i in range(len(list)):
     
     # Even if priority is equal, look in category
     j = 0
-    # while j < len(list[i] - 1):
+    while j < len(list[i]) - 1:
+        if list[i][j][4] == list[i][j+1][4] and list[i][j][5] == list[i][j+1][5]:
+            if list[i][j][2] == "Person loitering" and list[i][j+1][2] == "Crowd alert":
+                list[i].remove(list[i][j])
+            elif list[i][j+1][2] == "Person loitering" and list[i][j][2] == "Crowd alert":
+                list[i].remove(list[i][j+1])
+        j+=1
         
-# print(len(list[0]))
+print((list[0]))
         

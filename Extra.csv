@@ -1,0 +1,11 @@
+AreaCode,AreaName,ConditionName,Source,localtime,Priority,Link1
+12,Area12,Crowd alert,CAM-142,2022-04-04 18:16:26,48,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+90,Area90,Person loitering,CAM-182,2022-04-04 21:16:26.497000000,89,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+56,Area56,Crowd alert,CAM-980,2022-04-04 09:16:26.503000000,40,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+12,Area12,Person loitering,CAM-142,2022-04-04 18:16:26,48,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+21,Area21,Crowd alert,CAM-182,2022-04-04 14:16:26.587000000,78,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+56,Area56,Crowd alert,CAM-980,2022-04-04 17:16:26.673000000,48,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+12,Area12,Person loitering,CAM-142,2022-04-04 18:16:26.680000000,8,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+21,Area21,Crowd alert,CAM-182,2022-04-04 12:16:26.757000000,78,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+56,Area56,Person loitering,CAM-142,2022-04-04 20:16:26.770000000,34,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+12,Area12,Crowd alert,CAM-142,2022-04-04 10:16:26.857000000,88,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}

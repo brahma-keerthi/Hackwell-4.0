@@ -14,7 +14,7 @@ def sortTime(sub_li):
     # reverse = None (Sorts in Ascending order)
     # key is set to sort using second element of 
     # sublist lambda has been used
-    sub_li.sort(key = lambda x: x[3])
+    sub_li.sort(key = lambda x: x[4])
     return sub_li
 
 # Reading column wise
@@ -49,14 +49,12 @@ for i in range(len(arr)-1):
         list.append(arr[j:i+1])
         j = i+1
 
-# print(len(list))
+# print((list[0][0]))
 
-# 
+# Sorting based on the time
+for i in range(len(list)):
+    for j in range(len(list[i])):
+        list[i] = sortTime(list[i])
 
-
-# Converting sorted list back to the csv file
-with open('sorted.csv', 'w') as f:
-    write = csv.writer(f)
-      
-    write.writerow(header) # Writes the header
-    write.writerows(arr)  # Writes the rows
+print(list[0])
+        

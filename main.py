@@ -12,7 +12,7 @@ def Sort(sub_li):
     return sub_li
 
 # Reading column wise
-df = pd.read_csv("new.csv", usecols = ['AreaCode','AreaName','Priority','StartTime', 'EndTime', 'Link1'])
+df = pd.read_csv("new.csv", usecols = ['AreaCode','AreaName','Priority','StartTime', 'EndTime','Source', 'Link1'])
 
 # Converting column read file to csv
 df.to_csv("Extra.csv", index=False)

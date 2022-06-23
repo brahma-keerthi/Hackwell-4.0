@@ -7,18 +7,18 @@ def sortArea(sub_li):
     # reverse = None (Sorts in Ascending order)
     # key is set to sort using second element of 
     # sublist lambda has been used
-    sub_li.sort(key = lambda x: x[0])
+    sub_li.sort(key = lambda x: x[0])  # Index area = 0
     return sub_li
 
 def sortTime(sub_li):
     # reverse = None (Sorts in Ascending order)
     # key is set to sort using second element of 
     # sublist lambda has been used
-    sub_li.sort(key = lambda x: x[4])
-    return sub_li
+    sub_li.sort(key = lambda x: x[4]) # Index of time = 4
+    return sub_li 
 
 # Reading column wise
-df = pd.read_csv("data.csv", usecols = ['AreaCode','AreaName','Category','localtime', 'Priority','Source', 'Link1'])
+df = pd.read_csv("data.csv", usecols = ['AreaCode','AreaName','Category', 'Priority','localtime', 'Source', 'Link1'])
 
 # Converting column read file to csv
 df.to_csv("Extra.csv", index=False)
@@ -53,8 +53,21 @@ for i in range(len(arr)-1):
 
 # Sorting based on the time
 for i in range(len(list)):
-    for j in range(len(list[i])):
-        list[i] = sortTime(list[i])
-
-print(list[0])
+    list[i] = sortTime(list[i])
+    # Looking into priority when time is same
+    j=0
+    while j < (len(list[i])-1):
+        if list[i][j][4] == list[i][j+1][4]:
+            if int(list[i][j][5]) > int(list[i][j+1][5]):
+                list[i].remove(list[i][j+1])
+                
+            elif int(list[i][j][5]) < int(list[i][j+1][5]):
+                list[i].remove(list[i][j])
+        j+=1
+    
+    # Even if priority is equal, look in category
+    j = 0
+    # while j < len(list[i] - 1):
+        
+# print(len(list[0]))
         

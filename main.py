@@ -3,16 +3,22 @@ import numpy as np
 import pandas as pd
 import os
 
-def Sort(sub_li):
-  
+def sortArea(sub_li):
     # reverse = None (Sorts in Ascending order)
     # key is set to sort using second element of 
     # sublist lambda has been used
-    sub_li.sort(key = lambda x: x[2])
+    sub_li.sort(key = lambda x: x[0])
+    return sub_li
+
+def sortTime(sub_li):
+    # reverse = None (Sorts in Ascending order)
+    # key is set to sort using second element of 
+    # sublist lambda has been used
+    sub_li.sort(key = lambda x: x[3])
     return sub_li
 
 # Reading column wise
-df = pd.read_csv("new.csv", usecols = ['AreaCode','AreaName','Priority','StartTime', 'EndTime','Source', 'Link1'])
+df = pd.read_csv("data.csv", usecols = ['AreaCode','AreaName','Category','localtime', 'Priority','Source', 'Link1'])
 
 # Converting column read file to csv
 df.to_csv("Extra.csv", index=False)
@@ -32,8 +38,21 @@ with open('Extra.csv') as file_obj:
 # Removes the intermediate file Extra.csv
 os.remove("Extra.csv")
 
-# Sorts the data set based on the start timings
-arr = Sort(arr)
+# Sorts the data based on the data
+arr = sortArea(arr)
+
+# Separating the list out based on area code
+list = []
+j = 0
+for i in range(len(arr)-1):
+    if arr[i][0] != arr[i+1][0]:
+        list.append(arr[j:i+1])
+        j = i+1
+
+# print(len(list))
+
+# 
+
 
 # Converting sorted list back to the csv file
 with open('sorted.csv', 'w') as f:

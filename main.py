@@ -36,7 +36,7 @@ with open('Extra.csv') as file_obj:
     del arr[0]
 
 # Removes the intermediate file Extra.csv
-# os.remove("Extra.csv")
+os.remove("Extra.csv")
 
 # Sorts the data based on the data
 arr = sortArea(arr)
@@ -65,7 +65,7 @@ for i in range(len(list)):
                 list[i].remove(list[i][j])
         j+=1
     
-    # Even if priority is equal, look in category
+    # Even if priority is equal, look in category and sort
     j = 0
     while j < len(list[i]) - 1:
         if list[i][j][4] == list[i][j+1][4] and list[i][j][5] == list[i][j+1][5]:
@@ -74,6 +74,15 @@ for i in range(len(list)):
             elif list[i][j+1][2] == "Person loitering" and list[i][j][2] == "Crowd alert":
                 list[i].remove(list[i][j+1])
         j+=1
-        
-print((list[0]))
-        
+
+# Creating new separate csv file for separate areas
+for i in range(len(list)):
+    name = str(list[i][0][1])  # Gives name of area
+    name += ".csv"     
+    with open(name, 'w') as f:
+      
+        # using csv.writer method from CSV package
+        write = csv.writer(f)
+      
+        write.writerow(header)
+        write.writerows(list[i])

@@ -1,0 +1,3 @@
+AreaCode,AreaName,ConditionName,Source,localtime,Priority,Link1
+21,Area21,Crowd alert,CAM-182,2022-04-04 12:16:26.757000000,78,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
+21,Area21,Crowd alert,CAM-182,2022-04-04 14:16:26.587000000,78,%DVMWebServerPath%ShowClip.asp?SiteID=1&CameraID=143&ClipID={fd49ec94-6af1-469a-99f2-7020d15787c5}
